@@ -9,6 +9,7 @@ body{
     align-items: center;
     height: 100vh;
     background: linear-gradient(354deg, rgb(255, 126, 95), rgb(143, 123, 254));
+    padding: 0 10px;
 }
 .container{
     width: 850px;
@@ -97,6 +98,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 .game-modal img{
     max-width: 130px;
@@ -108,4 +110,26 @@ body{
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+@media (max-width: 900px){
+    .container{
+        flex-direction: column;
+    }
+    .hangman-box img{
+        max-width: 200px;
+    }
+    .word-display .letter{
+        width: 20px;
+        font-size: 20px;
+    }
+    .game-box .keyboard button{
+        width: calc(100% / 6 - 5px);
+    }
+    .hint-text{
+        font-size: 16px;
+    }
+    .quesses-text{
+        font-size: 16px;
+    }
 }
